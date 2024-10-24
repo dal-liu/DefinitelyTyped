@@ -2,8 +2,6 @@ declare const c: args;
 export = c;
 
 interface args {
-    sub: string[];
-
     option(name: string | [string, string], description: string, defaultValue?: any, init?: OptionInitFunction): args;
     options(list: Option[]): args;
     command(
@@ -17,6 +15,27 @@ interface args {
     parse(argv: string[], options?: ConfigurationOptions): { [key: string]: any };
     showHelp(): void;
     showVersion(): void;
+    details: object;
+    config: any;
+    printMainColor: any;
+    printSubColor: any;
+    Args: any;
+    handleType: any;
+    readOption: any;
+    getOptions: any;
+    generateExamples: any;
+    generateDetails: any;
+    runCommand: any;
+    checkHelp: any;
+    checkVersion: any;
+    isDefined: any;
+    optionWasProvided: any;
+    raw?: any;
+    binary?: any;
+    sub?: string[];
+    // test props
+    reset?: any;
+    suppressOutput?: any;
 }
 
 type OptionInitFunction = (value: any) => any;
